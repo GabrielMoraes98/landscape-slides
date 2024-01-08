@@ -1,0 +1,111 @@
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .slide {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  transition: ease-in-out 0.3s;
+}
+body .slide.active {
+  opacity: 1;
+  z-index: 2;
+}
+body .slide.pink {
+  background-image: url(../img/slide-pink-img.jpg);
+}
+body .slide.green {
+  background-image: url(../img/slide-green-img.jpg);
+}
+body .slide.orange {
+  background-image: url(../img/slide-orange-img.jpg);
+}
+body .slide.blue {
+  background-image: url(../img/slide-blue-img.jpg);
+}
+body .slide.purple {
+  background-image: url(../img/slide-purple-img.jpg);
+}
+body .slide .content {
+  backdrop-filter: blur(19px);
+  color: #eee;
+  max-width: 450px;
+  padding: 20px;
+  margin-left: 110px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 5px 15px;
+  border-radius: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+body .slide .content h1 {
+  text-shadow: #000 2px 2px 4px;
+  letter-spacing: 3px;
+}
+body .slide.pink .content h1,
+body .slide.pink .content a {
+  color: #f368a0;
+}
+body .slide.green .content h1,
+body .slide.green .content a {
+  color: #a3af2e;
+}
+body .slide.orange .content h1,
+body .slide.orange .content a {
+  color: rgb(236, 173, 56);
+}
+body .slide.blue .content h1,
+body .slide.blue .content a {
+  color: #839dcd;
+}
+body .slide.purple .content h1,
+body .slide.purple .content a {
+  color: #bf88ec;
+}
+body .slide .content a {
+  font-weight: 500;
+  width: fit-content;
+  letter-spacing: 1.2px;
+  text-shadow: #000 2px 2px 4px;
+}
+body .slide .content a:hover {
+  font-weight: 700;
+}
+
+body .slide .content p {
+  text-shadow: #000 2px 2px 6px;
+}
+body .arrow {
+  position: absolute;
+  z-index: 3;
+  cursor: pointer;
+  filter: drop-shadow(0px 2px 9px #000);
+  transition: ease-in-out 0.2s;
+}
+body .arrow:hover {
+  -webkit-filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.9));
+  filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.9));
+}
+body .arrow.opacity {
+  opacity: 0.5;
+  cursor: default;
+}
+#right {
+  right: 4%;
+}
+#left {
+  left: 2%;
+  transform: rotateY(180deg);
+}
